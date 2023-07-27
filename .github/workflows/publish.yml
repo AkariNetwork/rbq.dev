@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}
-          tags: ${{ env.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:latest
+          tags: latest
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
