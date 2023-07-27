@@ -10,7 +10,7 @@ env:
   DOCKER_HUB_USER: akaririn
   # 这里的image name不要加用户名前缀
   # 例如user/image，这里只取image
-  IMAGE_NAME:rbq-dev
+  IMAGE_NAME: rbq-dev
 
 jobs:
   build:
