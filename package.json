@@ -1,8 +1,7 @@
 {
   "name": "rbq-dev",
-  "private": true,
-  "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "author": "Akari Network",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
