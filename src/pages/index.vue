@@ -1,4 +1,17 @@
 <template>
+  <v-navigation-drawer v-model="drawer" color="primary" disable-resize-watcher>
+    <v-list nav>
+      <v-list-item link title="项目列表" />
+      <v-list-item link title="镜像站" />
+      <v-list-item
+        href="https://status.akari.moe"
+        link
+        rel="noopener noreferrer"
+        target="_blank"
+        title="状态监控"
+      />
+    </v-list>
+  </v-navigation-drawer>
   <v-layout>
     <v-app-bar color="transparent" flat>
       <template #prepend>
@@ -7,35 +20,40 @@
           @click="drawer = !drawer"
         />
       </template>
-
       <div class="d-flex flex-1-1-0 ps-md-4">
         <v-avatar image="@/assets/logo-basic.png" rounded="0" />
       </div>
-
       <div class="d-md-flex d-none ga-4 mx-auto">
         <v-btn class="text-none" text="项目列表" />
         <v-btn class="text-none" text="镜像站" />
-        <v-btn class="text-none" text="状态监控" />
+        <v-btn
+          class="text-none"
+          href="https://status.akari.moe"
+          rel="noopener noreferrer"
+          target="_blank"
+          text="状态监控"
+        />
       </div>
-
       <div class="d-flex flex-1-1-0 pe-3">
-        <v-btn class="ms-auto text-none" prepend-icon="mdi-github" slim text="GitHub" />
+        <v-btn
+          class="ms-auto text-none"
+          href="https://github.com/AkariNetwork/rbq.dev"
+          prepend-icon="mdi-github"
+          rel="noopener noreferrer"
+          slim
+          target="_blank"
+          text="GitHub"
+        />
       </div>
     </v-app-bar>
-
     <v-main :min-height="$vuetify.display.mdAndUp ? 800 : 550">
       <v-container class="h-100 d-flex align-center justify-center">
         <div class="w-100 w-md-50 text-center">
           <v-chip border="thin opacity-25" color="surface" variant="flat">
             官网V2仍在开发中，敬请期待
           </v-chip>
-
-          <h1 class="text-h4 text-md-h2 font-weight-bold my-6">
-            RBQ Dev Projects
-          </h1>
-
-          <div class="text-body-1 text-medium-emphasis mb-10"></div>
-
+          <h1 class="text-h4 text-md-h2 font-weight-bold my-6">RBQ Dev Projects</h1>
+          <div class="text-body-1 text-medium-emphasis mb-10" />
           <div class="d-flex ga-4 justify-center">
             <v-btn
               class="text-none"
@@ -44,7 +62,6 @@
               rounded="lg"
               text="Get started"
             />
-
             <v-btn
               append-icon="mdi-chevron-right"
               class="text-none"
@@ -54,7 +71,6 @@
             />
           </div>
         </div>
-
         <div class="v-bg position-absolute top-0 right-0 left-0 bottom-0">
           <div aria-hidden="true" class="overflow-hidden opacity-20 w-100 h-100" />
         </div>
